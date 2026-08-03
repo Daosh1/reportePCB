@@ -106,3 +106,4 @@ response = {
 	"GPU": "AMD Radeon 740M Graphics"
 }
 console.log(response)
+console.log(response.CPU)
