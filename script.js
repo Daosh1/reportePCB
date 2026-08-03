@@ -105,4 +105,13 @@ response = {
 	},
 	"GPU": "AMD Radeon 740M Graphics"
 }
-console.log(response)
+window.addEventListener("load", (event)=> { 
+    tituloPrincipal = document.getElementById("titulo")
+    console.log(response)
+    console.log(tituloPrincipal)
+})
+/*Poner cada elemento en un input
+incluir los elementos en html por medio de input
+los atributos de input son type, placeholder y value
+
+*/
