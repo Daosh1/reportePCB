@@ -70,6 +70,25 @@ window.addEventListener("load", (event) => {
 		agregarGPU(formulario, reporte.GPU);
 	}
 
+	// Cuando el usuario selecciona un archivo en el <input type="file">
+	selector.addEventListener("change", (e) => {
+		const archivo = e.target.files[0];
+		if (!archivo) return;
+
+		const lector = new FileReader();
+
+		lector.onload = function () {
+			try {
+				const datos = JSON.parse(lector.result);
+				construirFormulario(datos);
+			} catch (error) {
+				console.error("El archivo seleccionado no es un JSON válido:", error);
+			}
+		};
+
+		lector.readAsText(archivo);
+	});
+
 	
 
 });
